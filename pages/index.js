@@ -47,7 +47,7 @@ export default function Home() {
       {Open ? (
         <div
           onBlur={Focusout}
-          className="w-[100vw] -mt-20 backdrop-blur-sm  z-[100] h-[100%]  absolute flex justify-center items-center align-middle"
+          className="w-[100vw] -mt-20 backdrop-blur-sm h-[100vh] z-[100]  fixed flex justify-center items-center align-middle"
         >
           <div className="bg-white w-[50%] lg:h-[60%] md:h-[55%] h-[45%] relative rounded-lg shadow-lg text-center lg:text-3xl md:text-xl text-lg">
             <div className="flex  justify-between mt-5 mx-5">
@@ -65,7 +65,9 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-1 lg:text-lg md:text-lg text-sm mt-5 relative">
-              <p className=" cursor-pointer hover:underline hover:text-green-600">Vacancies</p>
+              <p className=" cursor-pointer hover:underline hover:text-green-600">
+                Vacancies
+              </p>
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Looking for a Job
               </p>
@@ -75,7 +77,9 @@ export default function Home() {
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Business contacts
               </p>
-              <p className=" cursor-pointer hover:underline hover:text-green-600">Legal services</p>
+              <p className=" cursor-pointer hover:underline hover:text-green-600">
+                Legal services
+              </p>
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Financial services
               </p>
@@ -85,14 +89,16 @@ export default function Home() {
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Internet services
               </p>
-              <p className=" cursor-pointer hover:underline hover:text-green-600">Miscellaneous</p>
+              <p className=" cursor-pointer hover:underline hover:text-green-600">
+                Miscellaneous
+              </p>
             </div>
           </div>
         </div>
       ) : (
         ""
       )}
-      <div className="h-[100vh] bg-[#EBF1F4]">
+      <div className="lg:h-[100vh] md:h-[100vh] h-auto bg-[#EBF1F4]">
         <div className="bg-green-300">
           <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-center justify-between">
@@ -117,117 +123,121 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-12 mx-[12%]">
+        <div className="mt-12 mb-20 bg-[#EBF1F4] mx-[12%]">
           <div className="lg:space-y-5 space-y-3 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 lg:space-x-5 md:space-x-2 space-x-0">
-            <div onClick={Focused} className="lg:mt-5 mt-3 bg-white lg:ml-5 md:ml-2 ml-0 p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="lg:mt-5 mt-3 bg-white lg:ml-5 md:ml-2 ml-0 p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Business} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 Work and Business
               </div>
             </div>
-            <div onClick={Focused} className=" bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className=" bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Transport} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 Transport
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Real_Estate} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl "
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl ">
                 Real Estate
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Building} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 Building
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Electric} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 Electrical Engineering
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Clothes} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
-               Clothes, Shoes
+              <div className="flex align-middle ml-2 items-center  text-xl">
+                Clothes, Shoes
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={For_Home} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 For Home
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Production} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 Production
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Children} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 For Kids
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Animal} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 Animals
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Agriculture} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 Agriculture
               </div>
             </div>
-            <div onClick={Focused} className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
-                
+            <div
+              onClick={Focused}
+              className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500"
+            >
               <Image src={Hobbies} />
-              <div
-                className="flex align-middle ml-2 items-center  text-xl"
-              >
+              <div className="flex align-middle ml-2 items-center  text-xl">
                 Recreation, Hobbies
               </div>
             </div>
           </div>
+        </div>
+        <div className="fixed shadow-2xl space-x-20 bottom-0 w-[100vw] h-12 bg-green-300 text-white  text-center flex justify-center items-center align-middle">
+          <div className="">Copyright © 2022 </div>
+          <div className="text-xl font-bold cursor-pointer">SS LV Ltd. </div>
         </div>
       </div>
     </>
