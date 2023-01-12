@@ -1,11 +1,32 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Inter } from "@next/font/google";
+import Business from "../public/work.png";
+import Transport from "../public/transport.png";
+import Real_Estate from "../public/real-estate.png";
+import Building from "../public/construction.png";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const [Open,setOpen] =useState(false)
+
+  const Focused = () => {
+    console.log("Focused")
+    setOpen(true);
+  }
+  const Focusout = () => {
+    console.log("focused out")
+    setOpen(false)
+  }
+  useEffect(() => {
+    // document.getElementsByClassName("focused").addEventListener("focusout", () => {
+    //   setOpen(false)
+    // })
+  })
+
   return (
     <>
       <Head>
@@ -14,110 +35,117 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      {Open ? (
+        <div
+          onBlur={Focusout}
+          className="w-[100vw] -mt-20 backdrop-blur-sm opacity-80  z-[100] h-[100%]  absolute flex justify-center items-center align-middle"
+        >
+          <div className="bg-white w-[50%] lg:h-[60%] md:h-[55%] h-[45%] relative rounded-lg shadow-lg text-center lg:text-3xl md:text-xl text-lg">
+            <div className="flex justify-between mt-5 mx-5">
+              <h1 className="lg:text-3xl md:text-xl text-sm font-bold  text-green-600">
+                Work and Business
+              </h1>
+              <div>
+                <button
+                  onClick={Focusout}
+                  className="border lg:text-lg md:text-sm text-xs hover:bg-red-500 hover:text-white hover:border-white font-bold tracking-wider border-red-500 text-red-700 lg:py-2 md:py-2 py-2 lg:px-4 md:px-2 px-2 rounded-lg"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+            <div className="space-y-1 lg:text-lg md:text-lg text-sm mt-5 relative">
+              <p className=" cursor-pointer hover:underline">Vacancies</p>
+              <p className=" cursor-pointer hover:underline">
+                Looking for a Job
+              </p>
+              <p className=" cursor-pointer hover:underline">
+                Courses, education
+              </p>
+              <p className=" cursor-pointer hover:underline">
+                Business contacts
+              </p>
+              <p className=" cursor-pointer hover:underline">Legal services</p>
+              <p className=" cursor-pointer hover:underline">
+                Financial services
+              </p>
+              <p className=" cursor-pointer hover:underline">
+                Translation of texts
+              </p>
+              <p className=" cursor-pointer hover:underline">
+                Internet services
+              </p>
+              <p className=" cursor-pointer hover:underline">Miscellaneous</p>
+            </div>
           </div>
         </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+      ) : (
+        ""
+      )}
+      <div className="h-[100vh] bg-[#EBF1F4]">
+        <div className="bg-green-300">
+          <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center justify-between">
+              <div className="flex w-0 flex-1 items-center">
+                <span className="flex px-5 font-bold rounded-lg justify-center bg-white text-green-600 text-2xl hover:text-white hover:bg-green-400 cursor-pointer py-2">
+                  {/* <MegaphoneIcon
+                  className="h-6 w-6 text-white"
+                  aria-hidden="true"
+                /> */}
+                  SS LV
+                </span>
+                <p className="ml-3 truncate font-medium text-white">
+                  <span className="md:hidden hover:underline">
+                    We announced a new product!
+                  </span>
+                  <span className="hidden md:inline hover:underline">
+                    Big news! We're excited to announce a brand new product.
+                  </span>
+                </p>
+              </div>
+              <div className=" font-bold mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
+                <a
+                  href="#"
+                  className="#262626flex px-5 rounded-lg justify-center bg-white text-green-600 text-lg hover:text-white hover:bg-green-400 cursor-pointer p-2"
+                >
+                  RU
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
+        <div className="mt-12 mx-[12%]">
+          <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 lg:space-x-2 md:space-x-2 space-x-0">
+            <div className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
+              <Image src={Business} />
+              <div
+                onClick={Focused}
+                className="flex align-middle ml-2 items-center  text-xl"
+              >
+                Work and Business
+              </div>
+            </div>
+            <div className="focused bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
+              <Image src={Transport} />
+              <div className="flex align-middle ml-2 items-center  text-xl">
+                Transport
+              </div>
+            </div>
+            <div className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
+              <Image src={Real_Estate} />
+              <div className="flex align-middle ml-2 items-center  text-xl ">
+                Real Estate
+              </div>
+            </div>
+            <div className="bg-white p-5 rounded-lg justify-center border-green-300 border hover:animate-pulse cursor-pointer  flex text-green-500">
+              <Image src={Building} />
+              <div className="flex align-middle ml-2 items-center  text-xl">
+                Building
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
+      </div>
     </>
-  )
+  );
 }
