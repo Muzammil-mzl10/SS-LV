@@ -3,6 +3,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Inter } from "@next/font/google";
 import Business from "../public/work.png";
+import Logo from "../public/logo.png";
+import fb from "../public/icons8-facebook-48.png";
+import Twitter from "../public/twitter.png";
 import Transport from "../public/transport.png";
 import Real_Estate from "../public/real-estate.png";
 import Building from "../public/construction.png";
@@ -100,25 +103,46 @@ export default function Home() {
       )}
       <div className="lg:h-[100vh] md:h-[100vh] h-auto bg-[#EBF1F4]">
         <div className="bg-green-300">
-          <div className="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
-            <div className="flex flex-wrap items-center justify-between">
-              <div className="flex w-0 flex-1 items-center">
-                <span className="flex px-5 font-bold rounded-lg justify-center bg-white text-green-600 text-2xl hover:text-white hover:bg-green-400 cursor-pointer py-2">
-                  SS LV
-                </span>
-                <p className="ml-3 truncate font-medium text-white">
-                  <span className="hidden md:inline hover:underline">
-                    Big news! We're excited to announce a brand new product.
-                  </span>
-                </p>
+          <div className="mx-auto max-w-7xl py-3 sm:px-6 lg:px-8 md:px-4 px-1">
+            <div className="flex flex-wrap items-center justify-around">
+              <div className="flex lg:flex-1 md:flex-1 flex-none items-center">
+                <Image
+                  className="rounded-lg"
+                  src={Logo}
+                  width={50}
+                  height={50}
+                />
               </div>
-              <div className=" font-bold mt-2 flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
-                <a
-                  href="#"
-                  className="#262626flex px-5 rounded-lg justify-center bg-white text-green-600 text-lg hover:text-white hover:bg-green-400 cursor-pointer p-2"
-                >
-                  RU
-                </a>
+              <div className="flex  justify-center items-center lg:space-x-10 md:space-x-3 space-x-1">
+                <div className="flex space-x-2">
+                  <Image
+                    src={fb}
+                    width={35}
+                    height={40}
+                    className="bg-[#0698EA]  rounded-lg cursor-pointer hover:border-white hover:border "
+                  />
+                  <Image
+                    src={Twitter}
+                    width={35}
+                    height={40}
+                    className="bg-white rounded-lg cursor-pointer hover:border-white hover:border "
+                  />
+                </div>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="bg-transparent p-2 rounded-lg border-2 border-white  lg:w-64 md:w-48 w-20"
+                />
+                <div className=" truncate font-medium text-white">
+                  <div className=" lg:text-xl md:text-lg text-xs font-bold  #262626flex lg:px-5 md:px-2 px-1 rounded-lg justify-center bg-white text-green-600  hover:text-white hover:bg-green-400 cursor-pointer py-2">
+                    Jobs
+                  </div>
+                </div>
+                <div className=" truncate font-medium text-white">
+                  <div className=" lg:text-xl md:text-lg text-xs font-bold  #262626flex lg:px-5 md:px-2 px-1 rounded-lg justify-center bg-white text-green-600  hover:text-white hover:bg-green-400 cursor-pointer py-2 ">
+                    Contact Us
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -237,7 +261,9 @@ export default function Home() {
         </div>
         <div className="fixed shadow-2xl space-x-20 bottom-0 w-[100vw] h-12 bg-green-300 text-white  text-center flex justify-center items-center align-middle">
           <div className="">Copyright © 2022 </div>
-          <div className="text-xl font-bold cursor-pointer">SS LV Ltd. </div>
+          <div className="text-xl font-bold cursor-pointer">
+            listallnow Ltd.{" "}
+          </div>
         </div>
       </div>
     </>
