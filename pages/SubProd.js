@@ -4,6 +4,8 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../public/sellallnowcom-website-favicon-color.png";
 import fb from "../public/icons8-facebook-48.png";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import Twitter from "../public/twitter.png";
 import Test from "../public/test1.jpg";
 import {
@@ -70,12 +72,16 @@ function classNames(...classes) {
 }
 const SubProd = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+   const router = useRouter();
+  const MoveToProd = () => {
+    router.push('/Product')
+  }
 
   return (
     <div className="lg:h-[100vh] md:h-[100vh] h-auto bg-[#EBF1F4]">
       <div className="bg-green-300">
         <div className="mx-auto max-w-7xl py-3 sm:px-6 lg:px-8 md:px-4 px-1">
-          <div className="flex flex-wrap items-center justify-around">
+          <div className="flex flex-wrap items-center justify-between">
             <div className="flex flex-col justify-center ml-4 align-middle items-center">
               <Image
                 className="rounded-lg bg-white hover:bg-green-300 shadow-green-600 shadow hover:animate-spin  border-2 border-green-800  hover:border-white cursor-pointer"
@@ -106,7 +112,7 @@ const SubProd = () => {
               />
               <div className=" truncate font-medium text-white">
                 <div className=" lg:text-xl md:text-lg text-xs font-bold  #262626flex lg:px-5 md:px-2 px-1 rounded-lg justify-center bg-white text-green-600  hover:text-white hover:bg-green-400 cursor-pointer py-2">
-                  Jobs
+                  SignUp
                 </div>
               </div>
               <div className=" truncate font-medium text-white">
@@ -396,7 +402,7 @@ const SubProd = () => {
 
                 {/* Product grid */}
                 <div className="lg:col-span-3 ">
-                  <div className="h-[100vh] rounded-lg p-2  w-full border-4 border-dashed border-gray-200 ">
+                  <div className="h-auto rounded-lg p-2  w-full border-4 border-dashed border-gray-200 ">
                     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
                       <div className="flex items-center justify-end pb-4">
                         <label for="table-search" className="sr-only">
@@ -457,7 +463,10 @@ const SubProd = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="bg-white border-b cursor-pointer dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <tr
+                            onClick={MoveToProd}
+                            className="bg-white border-b cursor-pointer cursor-pointer dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600"
+                          >
                             <td className="w-4 p-4">
                               <div className="flex items-center">
                                 <input
@@ -473,6 +482,7 @@ const SubProd = () => {
                                 </label>
                               </div>
                             </td>
+
                             <th
                               scope="row"
                               className="px-6 py-4  w-[30rem] h-auto flex items-center space-x-2 font-medium text-gray-900 dark:text-white"
@@ -488,7 +498,10 @@ const SubProd = () => {
                             <td className="px-6 py-4">Apple Inc.</td>
                             <td className="px-6 py-4">Shifts</td>
                           </tr>
-                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <tr
+                            onClick={MoveToProd}
+                            className="bg-white border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                          >
                             <td className="w-4 p-4">
                               <div className="flex items-center">
                                 <input
@@ -504,6 +517,7 @@ const SubProd = () => {
                                 </label>
                               </div>
                             </td>
+
                             <th
                               scope="row"
                               className="px-6 py-4  w-[30rem] h-auto flex items-center space-x-2 font-medium text-gray-900 dark:text-white"
@@ -519,7 +533,10 @@ const SubProd = () => {
                             <td className="px-6 py-4">Apple Inc.</td>
                             <td className="px-6 py-4">Shifts</td>
                           </tr>
-                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <tr
+                            onClick={MoveToProd}
+                            className="bg-white border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                          >
                             <td className="w-4 p-4">
                               <div className="flex items-center">
                                 <input
@@ -535,6 +552,7 @@ const SubProd = () => {
                                 </label>
                               </div>
                             </td>
+
                             <th
                               scope="row"
                               className="px-6 py-4  w-[30rem] h-auto flex items-center space-x-2 font-medium text-gray-900 dark:text-white"
@@ -550,7 +568,10 @@ const SubProd = () => {
                             <td className="px-6 py-4">Apple Inc.</td>
                             <td className="px-6 py-4">Shifts</td>
                           </tr>
-                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <tr
+                            onClick={MoveToProd}
+                            className="bg-white border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                          >
                             <td className="w-4 p-4">
                               <div className="flex items-center">
                                 <input
@@ -566,6 +587,7 @@ const SubProd = () => {
                                 </label>
                               </div>
                             </td>
+
                             <th
                               scope="row"
                               className="px-6 py-4  w-[30rem] h-auto flex items-center space-x-2 font-medium text-gray-900 dark:text-white"
@@ -581,7 +603,10 @@ const SubProd = () => {
                             <td className="px-6 py-4">Apple Inc.</td>
                             <td className="px-6 py-4">Shifts</td>
                           </tr>
-                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <tr
+                            onClick={MoveToProd}
+                            className="bg-white border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                          >
                             <td className="w-4 p-4">
                               <div className="flex items-center">
                                 <input
@@ -597,6 +622,7 @@ const SubProd = () => {
                                 </label>
                               </div>
                             </td>
+
                             <th
                               scope="row"
                               className="px-6 py-4  w-[30rem] h-auto flex items-center space-x-2 font-medium text-gray-900 dark:text-white"
@@ -612,7 +638,10 @@ const SubProd = () => {
                             <td className="px-6 py-4">Apple Inc.</td>
                             <td className="px-6 py-4">Shifts</td>
                           </tr>
-                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <tr
+                            onClick={MoveToProd}
+                            className="bg-white border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                          >
                             <td className="w-4 p-4">
                               <div className="flex items-center">
                                 <input
@@ -628,6 +657,7 @@ const SubProd = () => {
                                 </label>
                               </div>
                             </td>
+
                             <th
                               scope="row"
                               className="px-6 py-4  w-[30rem] h-auto flex items-center space-x-2 font-medium text-gray-900 dark:text-white"
@@ -643,7 +673,10 @@ const SubProd = () => {
                             <td className="px-6 py-4">Apple Inc.</td>
                             <td className="px-6 py-4">Shifts</td>
                           </tr>
-                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <tr
+                            onClick={MoveToProd}
+                            className="bg-white border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                          >
                             <td className="w-4 p-4">
                               <div className="flex items-center">
                                 <input
@@ -659,6 +692,7 @@ const SubProd = () => {
                                 </label>
                               </div>
                             </td>
+
                             <th
                               scope="row"
                               className="px-6 py-4  w-[30rem] h-auto flex items-center space-x-2 font-medium text-gray-900 dark:text-white"
@@ -674,7 +708,10 @@ const SubProd = () => {
                             <td className="px-6 py-4">Apple Inc.</td>
                             <td className="px-6 py-4">Shifts</td>
                           </tr>
-                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <tr
+                            onClick={MoveToProd}
+                            className="bg-white border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                          >
                             <td className="w-4 p-4">
                               <div className="flex items-center">
                                 <input
@@ -690,6 +727,7 @@ const SubProd = () => {
                                 </label>
                               </div>
                             </td>
+
                             <th
                               scope="row"
                               className="px-6 py-4  w-[30rem] h-auto flex items-center space-x-2 font-medium text-gray-900 dark:text-white"
@@ -705,7 +743,10 @@ const SubProd = () => {
                             <td className="px-6 py-4">Apple Inc.</td>
                             <td className="px-6 py-4">Shifts</td>
                           </tr>
-                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                          <tr
+                            onClick={MoveToProd}
+                            className="bg-white border-b cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                          >
                             <td className="w-4 p-4">
                               <div className="flex items-center">
                                 <input
@@ -721,6 +762,7 @@ const SubProd = () => {
                                 </label>
                               </div>
                             </td>
+
                             <th
                               scope="row"
                               className="px-6 py-4  w-[30rem] h-auto flex items-center space-x-2 font-medium text-gray-900 dark:text-white"

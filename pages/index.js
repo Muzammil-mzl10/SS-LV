@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Inter } from "@next/font/google";
 import Business from "../public/work.png";
+import Link from "next/link";
 import Logo from "../public/sellallnowcom-website-favicon-color.png";
 import fb from "../public/icons8-facebook-48.png";
 import Twitter from "../public/twitter.png";
@@ -68,33 +69,51 @@ export default function Home() {
               </div>
             </div>
             <div className="space-y-1 lg:text-lg md:text-lg text-sm mt-5 relative">
-              <p className=" cursor-pointer hover:underline hover:text-green-600">
-                Vacancies
-              </p>
-              <p className=" cursor-pointer hover:underline hover:text-green-600">
-                Looking for a Job
-              </p>
+              <Link href="/Total_Prod">
+                <p className=" cursor-pointer hover:underline hover:text-green-600">
+                  Vacancies
+                </p>
+              </Link>
+              <Link href="/Total_Prod">
+                <p className=" cursor-pointer hover:underline hover:text-green-600">
+                  Looking for a Job
+                </p>
+              </Link>
+              <Link href="/Total_Prod">
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Courses, education
               </p>
+              </Link>
+              <Link href="/Total_Prod">
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Business contacts
               </p>
+              </Link>
+              <Link href="/Total_Prod">
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Legal services
               </p>
+              </Link>
+              <Link href="/Total_Prod">
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Financial services
               </p>
+              </Link>
+              <Link href="/Total_Prod">
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Translation of texts
               </p>
+              </Link>
+              <Link href="/Total_Prod">
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Internet services
               </p>
+              </Link>
+              <Link href="/Total_Prod">
               <p className=" cursor-pointer hover:underline hover:text-green-600">
                 Miscellaneous
               </p>
+              </Link>
             </div>
           </div>
         </div>
@@ -135,7 +154,7 @@ export default function Home() {
                 />
                 <div className=" truncate font-medium text-white">
                   <div className=" lg:text-xl md:text-lg text-xs font-bold  #262626flex lg:px-5 md:px-2 px-1 rounded-lg justify-center bg-white text-green-600  hover:text-white hover:bg-green-400 cursor-pointer py-2">
-                    Jobs
+                    SignUp
                   </div>
                 </div>
                 <div className=" truncate font-medium text-white">
@@ -262,7 +281,7 @@ export default function Home() {
         <div className="fixed shadow-2xl space-x-20 bottom-0 w-[100vw] h-12 bg-green-300 text-white  text-center flex justify-center items-center align-middle">
           <div className="">Copyright © 2022 </div>
           <div className="text-xl font-bold cursor-pointer">
-            listallnow Ltd.{" "}
+            SellALLNow Ltd.{" "}
           </div>
         </div>
       </div>
