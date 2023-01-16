@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from "../public/logo.png";
+import Logo from "../public/sellallnowcom-website-favicon-color.png";
 import fb from "../public/icons8-facebook-48.png";
 import Image from "next/image";
 import Twitter from "../public/twitter.png";
@@ -68,8 +68,13 @@ const Product = () => {
       <div className="bg-green-300">
         <div className="mx-auto max-w-7xl py-3 sm:px-6 lg:px-8 md:px-4 px-1">
           <div className="flex flex-wrap items-center justify-around">
-            <div className="flex lg:flex-1 md:flex-1 flex-none items-center">
-              <Image className="rounded-lg" src={Logo} width={50} height={50} />
+            <div className="flex flex-col justify-center ml-4 align-middle items-center">
+              <Image
+                className="rounded-lg bg-white hover:bg-green-300 shadow-green-600 shadow hover:animate-spin  border-2 border-green-800  hover:border-white cursor-pointer"
+                src={Logo}
+                width={60}
+                height={60}
+              />
             </div>
             <div className="flex  justify-center items-center lg:space-x-10 md:space-x-3 space-x-1">
               <div className="flex space-x-2">
@@ -221,7 +226,11 @@ const Product = () => {
                 </div>
                 <div>
                   <p>
-                    Date: <span className='font-bold lg:ml-4 md:ml-4 ml-1' > 12-5-2022</span>
+                    Date:{" "}
+                    <span className="font-bold lg:ml-4 md:ml-4 ml-1">
+                      {" "}
+                      12-5-2022
+                    </span>
                   </p>
                   <p>
                     Views: <span className="font-bold ml-2"> 17 </span>
