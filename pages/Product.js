@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from "../public/sellallnowcom-website-favicon-color.png";
 import fb from "../public/icons8-facebook-48.png";
 import Image from "next/image";
+import Link from 'next/link';
 import Twitter from "../public/twitter.png";
 import Test from "../public/test1.jpg";
 import { PaperClipIcon } from "@heroicons/react/20/solid";
@@ -68,6 +69,7 @@ const Product = () => {
       <div className="bg-green-300">
         <div className="mx-auto max-w-7xl py-3 sm:px-6 lg:px-8 md:px-4 px-1">
           <div className="flex flex-wrap items-center justify-between">
+            <Link href={"/"}>
             <div className="flex flex-col justify-center ml-4 align-middle items-center">
               <Image
                 className="rounded-lg bg-white hover:bg-green-300 shadow-green-600 shadow hover:animate-spin  border-2 border-green-800  hover:border-white cursor-pointer"
@@ -76,6 +78,7 @@ const Product = () => {
                 height={60}
               />
             </div>
+            </Link>
             <div className="flex  justify-center items-center lg:space-x-10 md:space-x-3 space-x-1">
               <div className="flex space-x-2">
                 <Image

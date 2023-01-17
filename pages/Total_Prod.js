@@ -3,6 +3,7 @@ import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../public/sellallnowcom-website-favicon-color.png";
 import fb from "../public/icons8-facebook-48.png";
+import Building from "../public/construction.png";
 import Image from "next/image";
 import Link from "next/link";
 import Twitter from "../public/twitter.png";
@@ -69,21 +70,33 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 const Total_Prod = () => {
-    const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+   const [Open,setOpen] =useState(false)
+
+  const Focused = () => {
+    console.log("Focused")
+    setOpen(true);
+  }
+  const Focusout = () => {
+    console.log("focused out")
+    setOpen(false)
+  }
     
   return (
     <div className="lg:h-[100vh] md:h-[100vh] h-auto bg-[#EBF1F4]">
       <div className="bg-green-300">
         <div className="mx-auto max-w-7xl py-3 sm:px-6 lg:px-8 md:px-4 px-1">
           <div className="flex flex-wrap items-center justify-between">
-            <div className="flex flex-col justify-center ml-4 align-middle items-center">
-              <Image
-                className="rounded-lg bg-white hover:bg-green-300 shadow-green-600 shadow hover:animate-spin  border-2 border-green-800  hover:border-white cursor-pointer"
-                src={Logo}
-                width={60}
-                height={60}
-              />
-            </div>
+            <Link href={"/"}>
+              <div className="flex flex-col justify-center ml-4 align-middle items-center">
+                <Image
+                  className="rounded-lg bg-white hover:bg-green-300 shadow-green-600 shadow hover:animate-spin  border-2 border-green-800  hover:border-white cursor-pointer"
+                  src={Logo}
+                  width={60}
+                  height={60}
+                />
+              </div>
+            </Link>
             <div className="flex  justify-center items-center lg:space-x-10 md:space-x-3 space-x-1">
               <div className="flex space-x-2">
                 <Image
@@ -245,9 +258,76 @@ const Total_Prod = () => {
             </Dialog>
           </Transition.Root>
 
+          {Open ? (
+            <div
+              onBlur={Focusout}
+              className="w-[100vw] -mt-20 backdrop-blur-sm h-[100vh] z-[100]  fixed flex justify-center items-center align-middle"
+            >
+              <div className="bg-white w-[50%] lg:h-[60%] md:h-[55%] h-[45%] relative rounded-lg shadow-lg text-center lg:text-3xl md:text-xl text-lg">
+                <div className="flex  justify-between mt-5 mx-5">
+                  <Image src={Building} className="h-20 w-24 lg:block hidden" />
+                  <h1 className="lg:text-3xl md:text-xl text-sm font-bold  text-green-600">
+                    Work and Business
+                  </h1>
+                  <div>
+                    <button
+                      onClick={Focusout}
+                      className="border lg:text-lg md:text-sm text-xs hover:bg-red-500 hover:text-white hover:border-white font-bold tracking-wider border-red-500 text-red-700 lg:py-2 md:py-2 py-2 lg:px-4 md:px-2 px-2 rounded-lg"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+                <div className="space-y-1 lg:-mt-2  lg:text-2xl font-semibold md:text-lg text-sm mt-0 relative">
+                  
+                    <p className=" cursor-pointer hover:underline hover:text-green-600">
+                      Transport
+                    </p>
+                             
+                    <p className=" cursor-pointer hover:underline hover:text-green-600">
+                      Real Estate
+                    </p>              
+                  
+                    <p className=" cursor-pointer hover:underline hover:text-green-600">
+                      Building
+                    </p>
+                                  
+                    <p className=" cursor-pointer hover:underline hover:text-green-600">
+                      Electrical Engineering
+                    </p>
+                               
+                    <p className=" cursor-pointer hover:underline hover:text-green-600">
+                      Clothes, Shoes
+                    </p>
+                               
+                    <p className=" cursor-pointer hover:underline hover:text-green-600">
+                      For Home
+                  </p>
+                  
+                    <p className=" cursor-pointer hover:underline hover:text-green-600">
+                      Production
+                    </p>
+ 
+                    <p className=" cursor-pointer hover:underline hover:text-green-600">
+                      For Kids
+                    </p>
+
+                    <p className=" cursor-pointer hover:underline hover:text-green-600">
+                      Animals
+                    </p>
+                </div>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+
           <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex items-baseline justify-between border-b border-gray-200 pt-24 pb-6">
-              <h1 className="text-4xl font-bold tracking-tight text-green-300">
+              <h1
+                onClick={Focused}
+                className="text-4xl cursor-pointer animate-bounce font-bold tracking-tight text-green-300"
+              >
                 Work and Business
               </h1>
 
